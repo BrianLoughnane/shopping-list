@@ -56,30 +56,70 @@ header button {
 .item {
 	width: 32%;
 	text-align: left;
+	border: 1px dashed blue;
+	border-radius: 25px;
+
 }
 
-.cat-icons {
+.cat-icons, .text-icons {
 	display: inline-block;
+	vertical-align: top;
+}
+
+.text-icons {
+	width: 285px;
 }
 
 .text {
 	min-height: 39px;
 	padding: 10px 5px 3px 5px ;
+	width: 183px;
+	text-align: center;
 }
 
 
-.item, .item span, .item span i {
+.item, .item span, .text-icons>i {
 height: 39px;
 display: inline-block;
 vertical-align: top;
 }
 
+.text-icons>i {
+	width: 39px;
+}
 
 
+/*icons*/
 
+i {
+	-webkit-background-size: contain;
+	-moz-background-size: contain;
+	-o-background-size: contain;
+	-ms-background-size: contain;
+	background-size: contain;
+}
 
+.text-icons>i {
+	float: right;
+}
 
+.i-check {
+	background-image: url("images/check.png");
+}
 
+.item .i-uncheck {
+	background-image: url("images/uncheck.png");
+	display: none;
+}
+
+.i-remove {
+	background-image: url("images/remove.png");
+}
+
+.item .i-remove {
+	float: left;
+	margin-left: 20px;
+}
 
 
 
