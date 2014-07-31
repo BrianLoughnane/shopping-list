@@ -1,0 +1,92 @@
+* {
+	outline: 1px dotted red;
+}
+
+body {
+	font-family: Tahoma, Helvetica, Sans-serif;
+	/*font-size: 18px;*/
+}
+
+ul {
+	list-style-type: none;
+	padding: 0px;
+	text-align: center;
+}
+
+article {
+	padding: 0px 50px 0px 50px;
+}
+
+header input, header button {
+	display:inline-block;
+	vertical-align: top;
+}
+
+h1, h3 {
+	text-align: center;
+}
+
+header input {
+	width: 530px;
+	height: 40px;
+	font: bold 32px/32px Helvetica;
+	text-align: center;
+}
+
+header button {
+	width: 100px;
+	height: 39px;
+}
+
+#search-div {
+	width: 800px;
+	margin: auto;
+	vertical-align: top;
+}
+
+#categories>div {
+	width: 33%;
+	/*min-width: 32%;*/
+	display: inline-block;
+	/*margin: 0px 5px 0px 5px;*/
+}
+
+/*Item*/
+
+.item {
+	width: 32%;
+	text-align: left;
+}
+
+.cat-icons {
+	display: inline-block;
+}
+
+.text {
+	min-height: 39px;
+	padding: 10px 5px 3px 5px ;
+}
+
+
+.item, .item span, .item span i {
+height: 39px;
+display: inline-block;
+vertical-align: top;
+}
+
+
+
+
+
+
+
+
+
+
+/*background*/
+
+
+
+/*icons (x9)*/
+
+
