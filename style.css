@@ -14,10 +14,10 @@ Grid
 ============================
 */
 
-* {
+/** {
 	outline: 1px dotted red;
 }
-
+*/
 body {
 	font-family: Tahoma, Helvetica, Sans-serif;
 	/*font-size: 18px;*/
@@ -37,11 +37,17 @@ article {
 	padding: 0px 50px 0px 50px;
 }
 
+#uncategorized-div {
+	width: 32%;
+	margin: auto;
+}
+
 #categories>div {
 	width: 33%;
 	/*min-width: 32%;*/
 	display: inline-block;
 	/*margin: 0px 5px 0px 5px;*/
+	vertical-align: top;
 }
 
 /*
@@ -144,6 +150,11 @@ header button {
 	margin: 5px;
 }
 
+#search-div i:hover {
+	border: 3px solid #2669a5;
+	border-radius: 5px;
+}
+
 /*
 ==========================
 Item
@@ -151,14 +162,13 @@ Item
 */
 
 .item {
-	width: 32%;
+	width: 100%;
 	text-align: left;
-}
-
-.item {
-	height: 39px;
 	display: inline-block;
 	vertical-align: top;
+	border: 1px solid #2669a5;
+	border-radius: 25px;
+	background-color: #2d7;
 }
 
 .item * {
@@ -198,9 +208,30 @@ Item
 	line-height: 0px
 }
 
+.cat-icons i:hover {
+	border: 3px solid #2669a5;
+	border-radius: 5px;
+}
 
 
+/*
+=======================
+State Toggles
+=======================
+*/
 
+.cat-select {
+	border: 3px solid #2669a5;
+	border-radius: 5px;
+}
+
+.checked {
+	opacity: .2;
+}
+
+.hide {
+	display: none;
+}
 /*background*/
 
 
@@ -211,6 +242,6 @@ Style
 */
 
 h1, h3 {
-	background-color: #3b4045;
+	background-color: #2669a5;
 	color: white;
 }
