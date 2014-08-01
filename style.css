@@ -44,92 +44,6 @@ article {
 	/*margin: 0px 5px 0px 5px;*/
 }
 
-
-/*
-=============================
-Header
-=============================
-*/
-
-header input, header button {
-	display:inline-block;
-	vertical-align: top;
-}
-
-header input {
-	width: 530px;
-	height: 40px;
-	font: bold 32px/32px Helvetica;
-	text-align: center;
-}
-
-header button {
-	width: 100px;
-	height: 39px;
-}
-
-#search-div {
-	/*width: 800px;*/
-	margin: auto;
-	vertical-align: top;
-	text-align: center;
-}
-
-#search-div i {
-	width: 32px;
-	height: 32px;
-	display: inline-block;
-	margin: 5px;
-}
-
-
-/*
-==========================
-Item
-==========================
-*/
-
-.item {
-	width: 32%;
-	text-align: left;
-}
-
-.cat-icons {
-	vertical-align: top;
-	text-align: center;
-}
-
-.text-icons {
-	display: inline-block;
-	vertical-align: top;
-}
-
-.text-icons {
-	width: 285px;
-}
-
-.text {
-	min-height: 39px;
-	padding: 10px 5px 3px 5px ;
-	width: 183px;
-	text-align: center;
-}
-
-
-.item, .item span, .text-icons>i {
-height: 39px;
-display: inline-block;
-vertical-align: top;
-}
-
-.text-icons>i {
-	width: 39px;
-}
-
-.text-icons>i {
-	float: right;
-}
-
 /*
 ==============================
 icons
@@ -156,11 +70,6 @@ i {
 
 .i-remove {
 	background-image: url("images/remove.png");
-}
-
-.item .i-remove {
-	float: left;
-	margin-left: 20px;
 }
 
 .i-fnv {
@@ -198,11 +107,110 @@ i {
 .i-other {
 	background-image: url("images/other.png");
 }
+/*
+=============================
+Header
+=============================
+*/
+
+header input, header button {
+	display:inline-block;
+	vertical-align: top;
+}
+
+header input {
+	width: 530px;
+	height: 40px;
+	font: bold 32px/32px Helvetica;
+	text-align: center;
+}
+
+header button {
+	width: 100px;
+	height: 39px;
+}
+
+#search-div {
+	/*width: 800px;*/
+	margin: auto;
+	vertical-align: top;
+	text-align: center;
+}
+
+#search-div i {
+	width: 32px;
+	height: 32px;
+	display: inline-block;
+	margin: 5px;
+}
+
+/*
+==========================
+Item
+==========================
+*/
+
+.item {
+	width: 32%;
+	text-align: left;
+}
+
+.item {
+	height: 39px;
+	display: inline-block;
+	vertical-align: top;
+}
+
+.item * {
+	display: inline-block;
+}
+
+.item .remove i, .item .check-uncheck i {
+	width: 40px;
+	height: 40px;
+}
+
+.item .cat-icons i {
+	width: 20px;
+	height: 20px;
+	margin: 0px 3px;
+}
+
+.i-remove {
+	float: left;
+}
+
+.text {
+	min-height: 39px;
+	width: 76%;
+	text-align: center;
+	vertical-align: top;
+}
+
+.item .cat-icons {
+	vertical-align: top;
+	text-align: center;
+	line-height: 0px;
+}
+
+.check-uncheck {
+	float: right;
+	line-height: 0px
+}
+
+
+
 
 /*background*/
 
 
+/*
+========================
+Style
+========================
+*/
 
-/*icons (x9)*/
-
-
+h1, h3 {
+	background-color: #3b4045;
+	color: white;
+}
