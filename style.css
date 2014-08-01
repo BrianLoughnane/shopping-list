@@ -1,3 +1,19 @@
+/*
+============================
+Shopping List Application
+Built by Brian Loughnane
+July/August 2014
+============================
+*/
+
+
+
+/*
+============================
+Grid
+============================
+*/
+
 * {
 	outline: 1px dotted red;
 }
@@ -13,17 +29,31 @@ ul {
 	text-align: center;
 }
 
+h1, h3 {
+	text-align: center;
+}
+
 article {
 	padding: 0px 50px 0px 50px;
 }
 
+#categories>div {
+	width: 33%;
+	/*min-width: 32%;*/
+	display: inline-block;
+	/*margin: 0px 5px 0px 5px;*/
+}
+
+
+/*
+=============================
+Header
+=============================
+*/
+
 header input, header button {
 	display:inline-block;
 	vertical-align: top;
-}
-
-h1, h3 {
-	text-align: center;
 }
 
 header input {
@@ -39,29 +69,37 @@ header button {
 }
 
 #search-div {
-	width: 800px;
+	/*width: 800px;*/
 	margin: auto;
 	vertical-align: top;
+	text-align: center;
 }
 
-#categories>div {
-	width: 33%;
-	/*min-width: 32%;*/
+#search-div i {
+	width: 32px;
+	height: 32px;
 	display: inline-block;
-	/*margin: 0px 5px 0px 5px;*/
+	margin: 5px;
 }
 
-/*Item*/
+
+/*
+==========================
+Item
+==========================
+*/
 
 .item {
 	width: 32%;
 	text-align: left;
-	border: 1px dashed blue;
-	border-radius: 25px;
-
 }
 
-.cat-icons, .text-icons {
+.cat-icons {
+	vertical-align: top;
+	text-align: center;
+}
+
+.text-icons {
 	display: inline-block;
 	vertical-align: top;
 }
@@ -88,8 +126,15 @@ vertical-align: top;
 	width: 39px;
 }
 
+.text-icons>i {
+	float: right;
+}
 
-/*icons*/
+/*
+==============================
+icons
+==============================
+*/
 
 i {
 	-webkit-background-size: contain;
@@ -97,10 +142,7 @@ i {
 	-o-background-size: contain;
 	-ms-background-size: contain;
 	background-size: contain;
-}
-
-.text-icons>i {
-	float: right;
+	background-repeat: no-repeat;
 }
 
 .i-check {
@@ -121,7 +163,41 @@ i {
 	margin-left: 20px;
 }
 
+.i-fnv {
+	background-image: url("images/fnv.png");
+}
 
+.i-dairy {
+	background-image: url("images/dairy.png");
+}
+
+.i-meat {
+	background-image: url("images/meats.png");
+}
+
+.i-bng {
+	background-image: url("images/bng.png");
+}
+
+.i-snacks {
+	background-image: url("images/snacks.png");
+}
+
+.i-canned {
+	background-image: url("images/canned.png");
+}
+
+.i-spices {
+	background-image: url("images/spice.png");
+}
+
+.i-hhg {
+	background-image: url("images/hh.png");
+}
+
+.i-other {
+	background-image: url("images/other.png");
+}
 
 /*background*/
 
