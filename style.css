@@ -71,7 +71,6 @@ i {
 
 .item .i-uncheck {
 	background-image: url("images/uncheck.png");
-	display: none;
 }
 
 .i-remove {
@@ -178,12 +177,22 @@ Item
 .item .remove i, .item .check-uncheck i {
 	width: 40px;
 	height: 40px;
+	position: relative;
+	top: 3px;
+}
+
+.item .remove i {
+	left: 5px;
+}
+
+.item .check-uncheck i {
+	right: 9px;
 }
 
 .item .cat-icons i {
 	width: 20px;
 	height: 20px;
-	margin: 0px 3px;
+	margin: 0px 5px;
 }
 
 .i-remove {
@@ -198,9 +207,9 @@ Item
 }
 
 .item .cat-icons {
-	vertical-align: top;
-	text-align: center;
-	line-height: 0px;
+	position: absolute;
+	margin-top: 22px;
+	margin-left: 11px;
 }
 
 .check-uncheck {
@@ -213,6 +222,11 @@ Item
 	border-radius: 5px;
 }
 
+.item:hover {
+	border: 1px solid #184c7b;
+	background-color: #f82a39;
+	transition-duration: .5s;
+}
 
 /*
 =======================

@@ -14,7 +14,7 @@
 			<h1>My Shopping List</h1>
 			<div id="search-div">
 				<input id="input" type="text" name="grocery" />
-				<button>Add</button>
+				<button id="add">Add</button>
 				<div class="cat-icons">
 					<i class="i-fnv"></i>
 					<i class="i-dairy"></i>
@@ -30,7 +30,7 @@
 		</header>
 		<section id="uncategorized-div">
 			<h3>Uncategorized Items</h3>
-			<ul>
+			<ul id="uncategorized-ul">
 				<li>uncat item 1</li>
 				<li>uncat item 2</li>
 				<li class="item">
@@ -39,21 +39,19 @@
 						<i class="i-remove"></i>
 					</div>
 
-					<div class="text">
-					<!-- text -->Uncat item li
-					<!-- icons -->
-						<div class="cat-icons">
-							<i class="i-fnv"></i>
-							<i class="i-dairy"></i>
-							<i class="i-meat"></i>
-							<i class="i-bng"></i>
-							<i class="i-snacks"></i>
-							<i class="i-canned"></i>
-							<i class="i-spices"></i>
-							<i class="i-hhg"></i>
-							<i class="i-other"></i>
-						</div>
+					<div class="cat-icons">
+						<i class="i-fnv"></i>
+						<i class="i-dairy"></i>
+						<i class="i-meat"></i>
+						<i class="i-bng"></i>
+						<i class="i-snacks"></i>
+						<i class="i-canned"></i>
+						<i class="i-spices"></i>
+						<i class="i-hhg"></i>
+						<i class="i-other"></i>
 					</div>
+					
+					<div class="text">Uncat item li</div>	
 
 					<div class="check-uncheck">
 						<i class="i-check"></i>
@@ -162,5 +160,7 @@
 			</div>
 		</section>
 	</article>
+<script src="jquery.min.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
