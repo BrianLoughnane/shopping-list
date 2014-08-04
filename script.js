@@ -20,8 +20,9 @@ $(document).ready(function() {
 
 	// Header Effect
 
-	$("h1").css({"transform": "rotateX(360deg)"});
+	$("h1").css({"transform": "rotateY(360deg)"});
 
+	$("body").animate({"opacity": "1"});
 
 
 	// Create a new Item and add it to specified category

@@ -21,6 +21,16 @@ Grid
 body {
 	font-family: Tahoma, Helvetica, Sans-serif;
 	/*font-size: 18px;*/
+	background: url('images/food.jpg');
+	background-repeat: no-repeat;
+	background-size: 250px;
+	background-position: 59px 73px;
+	opacity: 0;
+	-webkit-transition: 1s;
+	-moz-transition: 1s;
+	-ms-transition: 1s;
+	-o-transition: 1s;
+	transition: 1s;	
 }
 
 ul {
@@ -35,7 +45,11 @@ h1, h3 {
 
 h1 {
 	padding: 10px 0px;
-	transition-duration: 1s;
+	-webkit-transition: 1s 1s;
+	-moz-transition: 1s 1s;
+	-o-transition: 1s 1s;
+	-ms-transition: 1s 1s;
+	transition: 1s 1s;
 }
 
 h3 {
@@ -153,6 +167,17 @@ header button {
 	text-align: center;
 }
 
+#instructions {
+	display: inline-block;
+	position: absolute;
+	width: 20%;
+}
+
+#instructions li {
+	border-bottom: 1px solid black;
+	text-align: right;
+}
+
 header .cat-icons {
 	margin: 30px 0px;
 }
@@ -183,6 +208,7 @@ Item
 	border: 1px solid #2669a5;
 	border-radius: 25px;
 	background-color: #2d7;
+	margin-bottom: 5px;
 }
 
 .item * {
