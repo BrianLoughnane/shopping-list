@@ -9,6 +9,9 @@ $(document).ready(function() {
 		var newItemName = $("#input").val();
 		var lastItem = $(catId).children().last();
 		lastItem.find(".text").text(newItemName);
+
+		$("header .cat-icons i").removeClass("cat-select");
+		$("#input").val("");
 	}
 
 	$("header .cat-icons").on("click", "i", function(){
@@ -54,6 +57,7 @@ $(document).ready(function() {
 	});
 
 	$("#add").on("click", function() {
+
 		if($("header i").hasClass("cat-select") === false) {
 			addNewItem("#uncategorized-ul");
 			addText("#uncategorized-ul");
@@ -75,12 +79,7 @@ $(document).ready(function() {
 			addNewItem("#hhg-ul");
 		} else if($("header .cat-icons i:nth-child(9)").hasClass("cat-select")) {
 			addNewItem("#other-ul");
-		} 
-
-
-	
-		$("header .cat-icons i").removeClass("cat-select");
-		$("#input").val("");
+		}; 
 	});
 
 	// $("#input").on("keyup", function(event) {
