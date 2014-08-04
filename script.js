@@ -3,8 +3,8 @@ $(document).ready(function() {
 	alert("hello world");
 
 	function addNewItem(catId) {
-		// var newItem = '<li class="item"><div class="remove"><i class="i-remove"></i></div><div class="cat-icons"><i class="i-fnv"></i><i class="i-dairy"></i><i class="i-meat"></i><i class="i-bng"></i><i class="i-snacks"></i><i class="i-canned"></i><i class="i-spices"></i><i class="i-hhg"></i><i class="i-other"></i></div><div class="text">newItemName goes here</div><div class="check-uncheck"><i class="i-check"></i><i class="i-uncheck hide"></i></div>';
-		$(catId).html('<li class="item"><div class="remove"><i class="i-remove"></i></div><div class="cat-icons"><i class="i-fnv"></i><i class="i-dairy"></i><i class="i-meat"></i><i class="i-bng"></i><i class="i-snacks"></i><i class="i-canned"></i><i class="i-spices"></i><i class="i-hhg"></i><i class="i-other"></i></div><div class="text">newItemName goes here</div><div class="check-uncheck"><i class="i-check"></i><i class="i-uncheck hide"></i></div>'); 
+		var newItem = '<li class="item"><div class="remove"><i class="i-remove"></i></div><div class="cat-icons"><i class="i-fnv"></i><i class="i-dairy"></i><i class="i-meat"></i><i class="i-bng"></i><i class="i-snacks"></i><i class="i-canned"></i><i class="i-spices"></i><i class="i-hhg"></i><i class="i-other"></i></div><div class="text">newItemName goes here</div><div class="check-uncheck"><i class="i-check"></i><i class="i-uncheck hide"></i></div>';
+		$(catId).append(newItem); 
 
 		var newItemName = $("#input").val();
 		var lastItem = $(catId).children().last();
@@ -60,6 +60,7 @@ $(document).ready(function() {
 
 		if($("header i").hasClass("cat-select") === false) {
 			addNewItem("#uncategorized-ul");
+			addText("#uncategorized-ul");
 		} else if($("header .cat-icons i:first-child").hasClass("cat-select")) {
 			addNewItem("#fnv-ul");
 		} else if($("header .cat-icons i:nth-child(2)").hasClass("cat-select")) {
@@ -94,21 +95,14 @@ $(document).ready(function() {
 	});
 
 
-	// $("li").on("click", "div.remove", 
-	// 	function() {
-	// 		console.log("remove triggered");
-	// 		$(this).closest(".item").remove();
-	// 	}
-	// );
-
-	$("div").on("click", "i.i-remove", 
-	function() {
-		console.log("remove triggered");
-		$(this).closest(".item").remove();
-	}
+	$(".remove").on("click", 
+		function() {
+			console.log("remove triggered");
+			$(this).closest(".item").remove();
+		}
 	);
 
-	$("li").delegate(".check-uncheck", "click", 
+	$(".check-uncheck").on("click", 
 		function() {
 			console.log("check-uncheck triggered");
 			$(this).closest(".item").toggleClass("checked");
