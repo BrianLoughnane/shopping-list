@@ -19,6 +19,9 @@ $(document).ready(function() {
 	$("header .cat-icons").on("click", "i", function(){
 		$(".cat-icons i").removeClass("cat-select");
 		$(this).addClass("cat-select");
+		if($("#input").val() !== "") {
+			$("#add").click();
+		};
 	});
 
 	$("li .cat-icons").on("click", "i", function(){
@@ -80,13 +83,22 @@ $(document).ready(function() {
 			addNewItem("#other-ul");
 		} 
 
+
 		$("#input").val("");
 		$("header .cat-icons i").removeClass("cat-select");
 	});
 
-	
+	// $("#input").on("keyup", function(event) {
+	// 	if($(this).hasFocus() && event.which===13) {
+	// 		$("#add").click();
+	// 	};
+	// });	
 
-
+	$(document).on("keyup", function(event) {
+		if(($("#input").val() !== "") && (event.which === 13)) {
+			$("#add").click();
+		};
+	});
 
 
 
