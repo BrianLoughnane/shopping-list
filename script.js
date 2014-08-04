@@ -51,7 +51,7 @@ $(document).ready(function() {
 
 	// Item Icons -- remove the parent list item and append it to a certain list
 
-	$("li .cat-icons").on("click", "i", function(){
+	$("ul").on("click", "i", function(){
 
 		var lineItem = $(this).closest("li");
 
@@ -115,7 +115,7 @@ $(document).ready(function() {
 
 	// Remove a list item
 
-	$(".remove").on("click", 
+	$("ul").on("click", ".remove", 
 		function() {
 			console.log("remove triggered");
 			$(this).closest(".item").remove();
@@ -126,7 +126,7 @@ $(document).ready(function() {
 
 	// Check or uncheck a list item
 
-	$(".check-uncheck").on("click", 
+	$("ul").on("click", ".check-uncheck",
 		function() {
 			console.log("check-uncheck triggered");
 			$(this).closest(".item").toggleClass("checked");
