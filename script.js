@@ -131,6 +131,8 @@ $(document).ready(function() {
 		function() {
 			console.log("check-uncheck triggered");
 			$(this).closest(".item").toggleClass("checked");
+			$(this).children(".i-check").toggleClass("hide");
+			$(this).children(".i-uncheck").toggleClass("hide");
 		}
 	);
 
