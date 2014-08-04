@@ -266,6 +266,10 @@ Item
 .item:hover {
 	border: 1px solid #184c7b;
 	background-color: #f82a39;
+	-webkit-transition-duration: .5s;
+	-moz-transition-duration: .5s;
+	-ms-transition-duration: .5s;
+	-o-transition-duration: .5s;
 	transition-duration: .5s;
 }
 
