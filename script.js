@@ -1,20 +1,43 @@
 $(document).ready(function() {
 
-	// alert("hello world");
+		// $("#input").on("keyup", function(event) {
+	// 	if($(this).hasFocus() && event.which===13) {
+	// 		$("#add").click();
+	// 	};
+	// });	
+
+
+
+	// Use the enter key to add items
+
+	$(document).on("keyup", function(event) {
+		if(($("#input").val() !== "") && (event.which === 13)) {
+			$("#add").click();
+		};
+	});
+
+
+
+	// Header Effect
 
 	$("h1").css({"transform": "rotateX(360deg)"});
 
-	function addNewItem(catId) {
-		var newItem = '<li class="item"><div class="remove"><i class="i-remove"></i></div><div class="cat-icons"><i class="i-fnv"></i><i class="i-dairy"></i><i class="i-meat"></i><i class="i-bng"></i><i class="i-snacks"></i><i class="i-canned"></i><i class="i-spices"></i><i class="i-hhg"></i><i class="i-other"></i></div><div class="text">newItemName goes here</div><div class="check-uncheck"><i class="i-check"></i><i class="i-uncheck hide"></i></div></li>';
-		$(catId).append(newItem); 
 
+
+	// Create a new Item and add it to specified category
+
+	function addNewItem(catId) {
 		var newItemName = $("#input").val();
-		var lastItem = $(catId).children().last();
-		lastItem.find(".text").text(newItemName);
+		var newItem = '<li class="item"><div class="remove"><i class="i-remove"></i></div><div class="cat-icons"><i class="i-fnv"></i><i class="i-dairy"></i><i class="i-meat"></i><i class="i-bng"></i><i class="i-snacks"></i><i class="i-canned"></i><i class="i-spices"></i><i class="i-hhg"></i><i class="i-other"></i></div><div class="text">'+ newItemName +'</div><div class="check-uncheck"><i class="i-check"></i><i class="i-uncheck hide"></i></div></li>';
+		$(catId).append(newItem); 
 
 		$("header .cat-icons i").removeClass("cat-select");
 		$("#input").val("");
 	}
+
+
+
+	// Header Icons -- Assign a category class and add item to the list
 
 	$("header .cat-icons").on("click", "i", function(){
 		$(".cat-icons i").removeClass("cat-select");
@@ -24,10 +47,11 @@ $(document).ready(function() {
 		};
 	});
 
+
+
+	// Item Icons -- remove the parent list item and append it to a certain list
+
 	$("li .cat-icons").on("click", "i", function(){
-		// Pseudo Code
-		// if this has class of i-fnv, remove the line and 
-		// append it to the fnv ul
 
 		var lineItem = $(this).closest("li");
 
@@ -58,11 +82,14 @@ $(document).ready(function() {
 
 	});
 
+
+
+	// Add item to a list based on if the header icon is selected
+
 	$("#add").on("click", function() {
 
 		if($("header i").hasClass("cat-select") === false) {
 			addNewItem("#uncategorized-ul");
-			addText("#uncategorized-ul");
 		} else if($("header .cat-icons i:first-child").hasClass("cat-select")) {
 			addNewItem("#fnv-ul");
 		} else if($("header .cat-icons i:nth-child(2)").hasClass("cat-select")) {
@@ -84,18 +111,9 @@ $(document).ready(function() {
 		}; 
 	});
 
-	// $("#input").on("keyup", function(event) {
-	// 	if($(this).hasFocus() && event.which===13) {
-	// 		$("#add").click();
-	// 	};
-	// });	
 
-	$(document).on("keyup", function(event) {
-		if(($("#input").val() !== "") && (event.which === 13)) {
-			$("#add").click();
-		};
-	});
 
+	// Remove a list item
 
 	$(".remove").on("click", 
 		function() {
@@ -104,11 +122,17 @@ $(document).ready(function() {
 		}
 	);
 
+
+
+	// Check or uncheck a list item
+
 	$(".check-uncheck").on("click", 
 		function() {
 			console.log("check-uncheck triggered");
 			$(this).closest(".item").toggleClass("checked");
 		}
 	);
+
+
 
 });
