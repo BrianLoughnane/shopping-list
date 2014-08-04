@@ -5,7 +5,7 @@ $(document).ready(function() {
 	function addNewItem(catId) {
 		var newItemName = $("#input").val();
 		var newItem = '<li class="item"><div class="remove"><i class="i-remove"></i></div><div class="cat-icons"><i class="i-fnv"></i><i class="i-dairy"></i><i class="i-meat"></i><i class="i-bng"></i><i class="i-snacks"></i><i class="i-canned"></i><i class="i-spices"></i><i class="i-hhg"></i><i class="i-other"></i></div><div class="text">newItemName goes here</div><div class="check-uncheck"><i class="i-check"></i><i class="i-uncheck hide"></i></div>';
-		$(catId).append(newItem);
+		$(catId).append(newItem); 
 		var lastItem = $(catId).last();
 		lastItem.find(".text").text(newItemName);
 	}
@@ -25,9 +25,30 @@ $(document).ready(function() {
 	});
 
 	$("li .cat-icons").on("click", "i", function(){
+		// Pseudo Code
+		// if this has class of i-fnv, remove the line and 
+		// append it to the fnv ul
+
+		// var lineItem = $(this).closest("li");
 		var lineItem = $(this).closest("li");
-		lineItem.remove();
-		$("#fnv-ul").append(lineItem);	
+
+		function changeCat(cattyId) {
+			lineItem.remove();
+			$(cattyId).append(lineItem);
+		}
+
+		if($(this).hasClass("i-fnv")) {
+			changeCat("#fnv-ul");
+		};
+
+		// if($(this).hasClass("i-fnv")) {
+		// 	lineItem.remove();
+		// 	$("#fnv-ul").append(lineItem);
+		// };
+
+		// var lineItem = $(this).closest("li");
+		// lineItem.remove();
+		// $("#fnv-ul").append(lineItem);	
 
 		// if($(this).closest("li").find("i").first().hasClass("cat-select")) {
 		// 	$("#fnv-ul").append(lineItem);
