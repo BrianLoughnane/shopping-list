@@ -206,7 +206,66 @@ Item
 ==========================
 */
 
+/** {
+	outline: 1px dotted red;
+}*/
+
 .item {
+	display: block;
+	/*text-align: left;*/
+	border: 1px solid #2669a5;
+	border-radius: 35px;
+	background-color: #2d7;
+	margin-bottom: 5px;
+	font-size: x-large;
+}
+
+.item>div:first-child, .item>div:last-child {
+	width: 40px;
+	height: 40px;
+	position: relative;
+	top: 7px;
+}
+
+.item>div:first-child {
+	left: 5px;
+}
+
+.item>div:last-child {
+	right: 7px;
+}
+
+.item>div:nth-child(2) {
+	width: 270px;
+}
+
+.item>div, .item i {
+	display: inline-block;
+	vertical-align: top;
+}
+
+.item>div>i {
+	height: 100%;
+	width: 100%;
+
+}
+
+.item div {
+	text-align: center;
+}
+
+.item .cat-icons i {
+	width: 18px;
+	height: 18px;
+	margin: 0px 2px;
+}
+
+.item .cat-icons {
+	/*text-align: center;*/
+	height: 20px;
+}
+
+/*.item {
 	width: 100%;
 	text-align: left;
 	display: inline-block;
@@ -277,7 +336,7 @@ Item
 	-ms-transition-duration: .5s;
 	-o-transition-duration: .5s;
 	transition-duration: .5s;
-}
+}*/
 
 /*
 =======================
