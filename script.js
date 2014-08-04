@@ -5,12 +5,13 @@ $(document).ready(function() {
 	$("h1").css({"transform": "rotateX(360deg)"});
 
 	function addNewItem(catId) {
-		var newItem = '<li class="item"><div class="remove"><i class="i-remove"></i></div><div class="cat-icons"><i class="i-fnv"></i><i class="i-dairy"></i><i class="i-meat"></i><i class="i-bng"></i><i class="i-snacks"></i><i class="i-canned"></i><i class="i-spices"></i><i class="i-hhg"></i><i class="i-other"></i></div><div class="text">newItemName goes here</div><div class="check-uncheck"><i class="i-check"></i><i class="i-uncheck hide"></i></div>';
-		$(catId).append(newItem); 
-
 		var newItemName = $("#input").val();
-		var lastItem = $(catId).children().last();
-		lastItem.find(".text").text(newItemName);
+		// var newItem = '<li class="item"><div class="remove"><i class="i-remove"></i></div><div class="cat-icons"><i class="i-fnv"></i><i class="i-dairy"></i><i class="i-meat"></i><i class="i-bng"></i><i class="i-snacks"></i><i class="i-canned"></i><i class="i-spices"></i><i class="i-hhg"></i><i class="i-other"></i></div><div class="text">'+ newItemName +'</div><div class="check-uncheck"><i class="i-check"></i><i class="i-uncheck hide"></i></div>';
+		// $(catId).append(newItem); 
+		// var newItem = '<li class="item"><div class="remove"><i class="i-remove"></i></div><div class="cat-icons"><i class="i-fnv"></i><i class="i-dairy"></i><i class="i-meat"></i><i class="i-bng"></i><i class="i-snacks"></i><i class="i-canned"></i><i class="i-spices"></i><i class="i-hhg"></i><i class="i-other"></i></div><div class="text">'+ newItemName +'</div><div class="check-uncheck"><i class="i-check"></i><i class="i-uncheck hide"></i></div>';		
+		$(catId).append('<li class="item"></li>').html('<div class="remove">remove</div><div class="text">'+ newItemName +'</div><div class="check-uncheck">check-uncheck</div>');
+
+
 
 		$("header .cat-icons i").removeClass("cat-select");
 		$("#input").val("");
