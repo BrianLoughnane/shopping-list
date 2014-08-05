@@ -28,50 +28,50 @@ $(document).ready(function() {
 
 	// Header Icons -- Assign a category class and add item to the list
 
-	$("header .cat-icons").on("click", "i", function() {
+	$("header").on("click", "i", function() {
 			$(".cat-icons i").removeClass("cat-select");
 			$(this).addClass("cat-select");
 			$("#add").click();
 		}
+	)
+	.on("mouseenter", "i", 
+		function() {
+			var x = $(this);
+			function showTooltip(icon, span) {
+				if(x.hasClass(icon)) {
+				x.closest("#search-div").find(".tooltipDiv").find(span).slideDown();	
+				}
+			}
+			showTooltip("i-fnv", ".s-fnv");
+			showTooltip("i-dairy", ".s-dairy");
+			showTooltip("i-meat", ".s-meat");
+			showTooltip("i-bng", ".s-bng");
+			showTooltip("i-snacks", ".s-snacks");
+			showTooltip("i-canned", ".s-canned");
+			showTooltip("i-spices", ".s-spices");
+			showTooltip("i-hhg", ".s-hhg");
+			showTooltip("i-other", ".s-other");
+		}
+	)
+	.on("mouseleave", "i",
+		function() {
+			var x = $(this);
+			function hideTooltip(icon, span) {
+				if(x.hasClass(icon)) {
+				x.closest("#search-div").find(".tooltipDiv").find(span).slideUp();	
+				}
+			}
+			hideTooltip("i-fnv", ".s-fnv");
+			hideTooltip("i-dairy", ".s-dairy");
+			hideTooltip("i-meat", ".s-meat");
+			hideTooltip("i-bng", ".s-bng");
+			hideTooltip("i-snacks", ".s-snacks");
+			hideTooltip("i-canned", ".s-canned");
+			hideTooltip("i-spices", ".s-spices");
+			hideTooltip("i-hhg", ".s-hhg");
+			hideTooltip("i-other", ".s-other");
+		}
 	);
-	// .on("mouseenter", "i", 
-	// 	function() {
-	// 		var x = $(this);
-	// 		function showTooltip(icon, span) {
-	// 			if(x.hasClass(icon)) {
-	// 			x.closest(".cat-icons").find(span).slideDown();	
-	// 			}
-	// 		}
-	// 		showTooltip("i-fnv", ".s-fnv");
-	// 		showTooltip("i-dairy", ".s-dairy");
-	// 		showTooltip("i-meat", ".s-meat");
-	// 		showTooltip("i-bng", ".s-bng");
-	// 		showTooltip("i-snacks", ".s-snacks");
-	// 		showTooltip("i-canned", ".s-canned");
-	// 		showTooltip("i-spices", ".s-spices");
-	// 		showTooltip("i-hhg", ".s-hhg");
-	// 		showTooltip("i-other", ".s-other");
-	// 	}
-	// )
-	// .on("mouseleave", "i",
-	// 	function() {
-	// 		var x = $(this);
-	// 		function hideTooltip(icon, span) {
-	// 			if(x.hasClass(icon)) {
-	// 			x.closest(".cat-icons").find(span).slideUp();	
-	// 			}
-	// 		}
-	// 		hideTooltip("i-fnv", ".s-fnv");
-	// 		hideTooltip("i-dairy", ".s-dairy");
-	// 		hideTooltip("i-meat", ".s-meat");
-	// 		hideTooltip("i-bng", ".s-bng");
-	// 		hideTooltip("i-snacks", ".s-snacks");
-	// 		hideTooltip("i-canned", ".s-canned");
-	// 		hideTooltip("i-spices", ".s-spices");
-	// 		hideTooltip("i-hhg", ".s-hhg");
-	// 		hideTooltip("i-other", ".s-other");
-	// 	}
-	// );
 
 
 

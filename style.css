@@ -223,13 +223,19 @@ header .cat-icons {
 
 /*
 ==========================
-Item
+Tooltips
 ==========================
 */
 
-header .cat-icons span {
+.tooltipDiv {
+	display: inline-block;
 	position: absolute;
-	top: 45px;  /*to 45px*/
+	left: 50px;
+}
+
+.tooltipDiv span {
+	position: absolute;
+	top: -30px; 
 	display: inline-block;
 	/*outline: 1px solid red;*/
 	display: none;
