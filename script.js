@@ -28,13 +28,19 @@ $(document).ready(function() {
 	// Create a new Item and add it to specified category
 
 	function addNewItem(catId) {
-		var newItemName = $("#input").val();
+
+		var newItemName = $.trim($("#input").val());
 		var newItem = '<li class="item"><div class="remove"><i class="i-remove"></i></div><div><div class="text">'+ newItemName +'</div><div class="cat-icons"><i class="i-fnv"></i><i class="i-dairy"></i><i class="i-meat"></i><i class="i-bng"></i><i class="i-snacks"></i><i class="i-canned"></i><i class="i-spices"></i><i class="i-hhg"></i><i class="i-other"></i></div></div><div class="check-uncheck"><i class="i-check"></i><i class="i-uncheck hide"></i></div></li>';
 
+		if(newItemName !== "") {
+		
 		$(catId).append(newItem); 
 
 		$("header .cat-icons i").removeClass("cat-select");
 		$("#input").val("");
+
+		};
+
 	}
 
 
@@ -119,11 +125,21 @@ $(document).ready(function() {
 
 	$("ul").on("click", ".remove", 
 		function() {
-			console.log("remove triggered");
 			$(this).closest(".item").remove();
 		}
 	);
 
+	$("ul").on("mouseover", ".remove", 
+		function() {
+			$(this).closest(".item").addClass("removeHover");
+		}
+	);
+
+	$("ul").on("mouseleave", ".remove", 
+		function() {
+			$(this).closest(".item").removeClass("removeHover");
+		}
+	);
 
 
 	// Check or uncheck a list item
@@ -137,6 +153,36 @@ $(document).ready(function() {
 		}
 	);
 
+	$("ul").on("mouseenter", ".check-uncheck", function() {
+		
+		if($(this).closest(".item").hasClass("checked")) {
 
+			$(this).closest(".item").addClass("uncheckHover");
+			
+		} else {
+
+			$(this).closest(".item").addClass("checkHover");
+		
+		};
+
+	}
+
+	);
+
+	$("ul").on("mouseleave", ".check-uncheck", function() {
+
+		if($(this).closest(".item").hasClass("checked")) {
+
+			$(this).closest(".item").removeClass("uncheckHover");
+
+		} else {
+
+			$(this).closest(".item").removeClass("checkHover");
+		
+		};
+
+
+	}
+	);
 
 });

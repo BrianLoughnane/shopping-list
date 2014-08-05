@@ -289,6 +289,29 @@ Item
 	transition-duration: .5s;
 }*/
 
+
+
+/*
+=======================
+State Toggles
+=======================
+*/
+
+.cat-select {
+	border: 3px solid #2669a5;
+	border-radius: 5px;
+}
+
+.checked {
+	opacity: .2;
+	border: 1px solid #184c7b;
+	background-color: #ffe32b;
+}
+
+.hide {
+	display: none;
+}
+
 .removeHover {
 	border: 1px solid #184c7b;
 	background-color: #f82a39;
@@ -309,22 +332,12 @@ Item
 	transition-duration: .5s;
 }
 
-/*
-=======================
-State Toggles
-=======================
-*/
-
-.cat-select {
-	border: 3px solid #2669a5;
-	border-radius: 5px;
+.uncheckHover {
+	border: 1px solid #2669a5;
+	background-color: #2d7;;
+	-webkit-transition-duration: .5s;
+	-moz-transition-duration: .5s;
+	-ms-transition-duration: .5s;
+	-o-transition-duration: .5s;
+	transition-duration: .5s;
 }
-
-.checked {
-	opacity: .2;
-}
-
-.hide {
-	display: none;
-}
-
