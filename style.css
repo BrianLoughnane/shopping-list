@@ -235,7 +235,7 @@ Tooltips
 
 .tooltipDiv span {
 	position: absolute;
-	top: -30px; 
+	top: -24px; 
 	display: inline-block;
 	/*outline: 1px solid red;*/
 	display: none;
@@ -248,7 +248,7 @@ Tooltips
 }
 
 .s-fnv {
-	left: 300px;
+	left: 330px;
 }
 
 .s-dairy {
@@ -260,7 +260,7 @@ Tooltips
 }
 
 .s-bng {
-	left: 458px;
+	left: 495px;
 }
 
 .s-snacks {
@@ -269,15 +269,15 @@ Tooltips
 }
 
 .s-canned {
-	left: 550px;
+	left: 580px;
 }
 
 .s-spices {
-	left: 635px;
+	left: 631px;
 }
 
 .s-hhg {
-	left: 639px;
+	left: 662px;
 }
 
 .s-other {
