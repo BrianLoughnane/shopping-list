@@ -6,6 +6,11 @@ $(document).ready(function() {
 	// 	};
 	// });	
 
+	// Header Effect
+
+	$("h1").css({"transform": "rotateY(360deg)"});
+
+	$("body").animate({"opacity": "1"});
 
 
 	// Use the enter key to add items
@@ -15,15 +20,6 @@ $(document).ready(function() {
 			$("#add").click();
 		};
 	});
-
-
-
-	// Header Effect
-
-	$("h1").css({"transform": "rotateY(360deg)"});
-
-	$("body").animate({"opacity": "1"});
-
 
 	// Create a new Item and add it to specified category
 
@@ -54,6 +50,7 @@ $(document).ready(function() {
 			$("#add").click();
 		};
 	});
+
 
 
 
@@ -123,19 +120,18 @@ $(document).ready(function() {
 
 	// Remove a list item
 
-	$("ul").on("click", ".remove", 
+	$("ul")
+	.on("click", ".remove", 
 		function() {
 			$(this).closest(".item").remove();
 		}
-	);
-
-	$("ul").on("mouseover", ".remove", 
+	)
+	.on("mouseover", ".remove", 
 		function() {
 			$(this).closest(".item").addClass("removeHover");
 		}
-	);
-
-	$("ul").on("mouseleave", ".remove", 
+	)
+	.on("mouseleave", ".remove", 
 		function() {
 			$(this).closest(".item").removeClass("removeHover");
 		}
@@ -144,45 +140,31 @@ $(document).ready(function() {
 
 	// Check or uncheck a list item
 
-	$("ul").on("click", ".check-uncheck",
+	$("ul")
+	.on("click", ".check-uncheck",
 		function() {
-			console.log("check-uncheck triggered");
-			$(this).closest(".item").toggleClass("checked");
+			var item = $(this).closest(".item");
+			item.toggleClass("checked");
 			$(this).children(".i-check").toggleClass("hide");
 			$(this).children(".i-uncheck").toggleClass("hide");
 		}
-	);
-
-	$("ul").on("mouseenter", ".check-uncheck", function() {
-		
-		if($(this).closest(".item").hasClass("checked")) {
-
-			$(this).closest(".item").addClass("uncheckHover");
-			
+	)
+	.on("mouseenter", ".check-uncheck", function() {
+		var item = $(this).closest(".item");	
+		if(item.hasClass("checked")) {
+			item.addClass("uncheckHover");
 		} else {
-
-			$(this).closest(".item").addClass("checkHover");
-		
+			item.removeClass("uncheckHover")
+			item.addClass("checkHover");
 		};
-
-	}
-
-	);
-
-	$("ul").on("mouseleave", ".check-uncheck", function() {
-
-		if($(this).closest(".item").hasClass("checked")) {
-
-			$(this).closest(".item").removeClass("uncheckHover");
-
+	})
+	.on("mouseleave", ".check-uncheck", function() {
+		var item = $(this).closest(".item");
+		if(item.hasClass("checked")) {
+			item.removeClass("uncheckHover");
 		} else {
-
-			$(this).closest(".item").removeClass("checkHover");
-		
+			item.removeClass("checkHover");
 		};
-
-
-	}
-	);
+	});
 
 });

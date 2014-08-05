@@ -312,15 +312,10 @@ State Toggles
 	display: none;
 }
 
-.removeHover {
-	border: 1px solid #184c7b;
-	background-color: #f82a39;
-	-webkit-transition-duration: .5s;
-	-moz-transition-duration: .5s;
-	-ms-transition-duration: .5s;
-	-o-transition-duration: .5s;
-	transition-duration: .5s;
-}
+
+/*.checkedRemoveHover {
+
+}*/
 
 .checkHover {
 	border: 1px solid #184c7b;
@@ -335,6 +330,16 @@ State Toggles
 .uncheckHover {
 	border: 1px solid #2669a5;
 	background-color: #2d7;;
+	-webkit-transition-duration: .5s;
+	-moz-transition-duration: .5s;
+	-ms-transition-duration: .5s;
+	-o-transition-duration: .5s;
+	transition-duration: .5s;
+}
+
+.removeHover {
+	border: 1px solid #184c7b;
+	background-color: #f82a39;
 	-webkit-transition-duration: .5s;
 	-moz-transition-duration: .5s;
 	-ms-transition-duration: .5s;
