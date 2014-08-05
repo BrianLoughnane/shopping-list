@@ -19,6 +19,7 @@ Grid & Style
 }
 */
 
+
 h1, h3 {
 	background-color: #2669a5;
 	color: white;
@@ -105,7 +106,15 @@ i {
 }
 
 .cat-icons i:hover {
+	-webkit-transform: scale(2);
+	-moz-transform: scale(2);
+	-ms-transform: scale(2);
+	-o-transform: scale(2);
 	transform: scale(2);
+	-webkit-transition: .5s;
+	-moz-transition: .5s;
+	-ms-transition: .5s;
+	-o-transition: .5s;
 	transition: .5s;
 }
 
