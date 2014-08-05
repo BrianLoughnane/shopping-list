@@ -229,7 +229,7 @@ Item
 
 header .cat-icons span {
 	position: absolute;
-	top: 15px;  /*to 45px*/
+	top: 45px;  /*to 45px*/
 	display: inline-block;
 	/*outline: 1px solid red;*/
 	display: none;
@@ -274,8 +274,7 @@ header .cat-icons span {
 	left: 639px;
 }
 
-.s-other:hover {
-	display: inline-block !important;
+.s-other {
 	left: 729px;
 }
 
