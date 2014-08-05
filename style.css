@@ -218,9 +218,66 @@ h4 {
 
 header .cat-icons {
 	margin: 30px 0px;
+	position: relative;
 }
 
+/*
+==========================
+Item
+==========================
+*/
 
+header .cat-icons span {
+	position: absolute;
+	top: 15px;  /*to 45px*/
+	display: inline-block;
+	/*outline: 1px solid red;*/
+	display: none;
+	padding: 3px 20px;
+	font-size: 20px;
+	box-shadow: 0px 0px 10px #2d7;
+	border-radius: 10px;
+	background: white;
+	color: #2D7;
+}
+
+.s-fnv {
+	left: 300px;
+}
+
+.s-dairy {
+	left: 408px;
+}
+
+.s-meat {
+	left: 456px;
+}
+
+.s-bng {
+	left: 458px;
+}
+
+.s-snacks {
+	left: 539px;
+
+}
+
+.s-canned {
+	left: 550px;
+}
+
+.s-spices {
+	left: 635px;
+}
+
+.s-hhg {
+	left: 639px;
+}
+
+.s-other:hover {
+	display: inline-block !important;
+	left: 729px;
+}
 
 /*
 ==========================
@@ -288,17 +345,6 @@ Item
 	height: 20px;
 }
 
-/*.item:hover {
-	border: 1px solid #184c7b;
-	background-color: #f82a39;
-	-webkit-transition-duration: .5s;
-	-moz-transition-duration: .5s;
-	-ms-transition-duration: .5s;
-	-o-transition-duration: .5s;
-	transition-duration: .5s;
-}*/
-
-
 
 /*
 =======================
@@ -321,10 +367,6 @@ State Toggles
 	display: none;
 }
 
-
-/*.checkedRemoveHover {
-
-}*/
 
 .checkHover {
 	border: 1px solid #184c7b;
