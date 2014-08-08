@@ -28,61 +28,12 @@ h1, h3 {
 body {
 	font-family: Tahoma, Helvetica, Sans-serif;
 	/*font-size: 18px;*/
-	background: url('images/food.jpg');
-	background-repeat: no-repeat;
-	background-size: 250px;
-	background-position: 59px 73px;
-	background: white;
 	opacity: 0;
 	-webkit-transition: 1s;
 	-moz-transition: 1s;
 	-ms-transition: 1s;
 	-o-transition: 1s;
 	transition: 1s;	
-}
-
-ul {
-	list-style-type: none;
-	padding: 0px;
-	text-align: center;
-}
-
-h1, h3 {
-	text-align: center;
-}
-
-h1 {
-	padding: 10px 0px;
-	-webkit-transition: 1s 1s;
-	-moz-transition: 1s 1s;
-	-o-transition: 1s 1s;
-	-ms-transition: 1s 1s;
-	transition: 1s 1s;
-}
-
-h3 {
-	height: 30px;
-	padding-top: 2px;
-}
-
-#uncategorized-div {
-	display: block;
-	overflow: hidden;
-}
-
-#uncategorized-div div{
-	margin-left: 0%;
-}
-
-@media (min-width: 768px) {
-  #uncategorized-div div {
-    margin-left: 33.4%;
-  }
-}
-
-#categories {
-	text-align: center;
-	display: block;
 }
 
 @media all and (max-width: 316px) and (min-width: 0px) {
@@ -126,6 +77,52 @@ h3 {
 		background-position: 59px 73px;		
 	}
 }
+
+ul {
+	list-style-type: none;
+	padding: 0px;
+	text-align: center;
+}
+
+h1, h3 {
+	text-align: center;
+}
+
+h1 {
+	padding: 10px 0px;
+	-webkit-transition: 1s 1s;
+	-moz-transition: 1s 1s;
+	-o-transition: 1s 1s;
+	-ms-transition: 1s 1s;
+	transition: 1s 1s;
+}
+
+h3 {
+	height: 30px;
+	padding-top: 2px;
+}
+
+#uncategorized-div {
+	display: block;
+	overflow: hidden;
+}
+
+#uncategorized-div>div{
+	margin-left: 0%;
+}
+
+@media (min-width: 768px) {
+  #uncategorized-div>div {
+    margin-left: 33.4%;
+  }
+}
+
+#categories {
+	text-align: center;
+	display: block;
+}
+
+
 
 /*
 ==============================
@@ -350,28 +347,33 @@ Item
 	background-color: #2d7;
 	margin-bottom: 5px;
 	font-size: x-large;
-	min-width: 365px;
+	/*min-width: 365px;*/
 }
 
-.item>div:first-child, .item>div:last-child {
-	width: 40px;
-	height: 40px;
+.item .remove, .item .check-uncheck {
+	width: 30px;
+	height: 30px;
 	position: relative;
 	top: 7px;
 }
 
-.item>div:first-child {
+.item .remove {
 	left: 5px;
 	float: left;
 }
 
-.item>div:last-child {
+.item .check-uncheck {
 	right: 7px;
 	float: right;
 }
 
-.item>div:nth-child(2) {
-	width: 270px;
+.item .textAndIcons {
+	margin-top: -9%;
+}
+
+.item .text {
+	width: 70%;
+	margin: auto;
 }
 
 .item>div, .item i {
