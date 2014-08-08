@@ -98,8 +98,7 @@ h1 {
 }
 
 h3 {
-	height: 30px;
-	padding-top: 2px;
+	padding: 2px 0px;
 }
 
 #uncategorized-div {
@@ -263,6 +262,7 @@ h4 {
 
 header .cat-icons {
 	margin: 30px 0px;
+	margin-bottom: 0px;
 	position: relative;
 }
 
@@ -273,14 +273,17 @@ Tooltips
 */
 
 .tooltipDiv {
-	display: inline-block;
-	position: absolute;
-	left: 50px;
+	display: block;
+	position: relative;
+	/*left: 50px;*/
+	/*text-align: left;*/
+	text-align: center;
+	height: 50px;
 }
 
 .tooltipDiv span {
-	position: absolute;
-	top: -24px; 
+/*	position: absolute;
+	top: 50%;*/
 	display: inline-block;
 	/*outline: 1px solid red;*/
 	display: none;
@@ -290,44 +293,69 @@ Tooltips
 	border-radius: 10px;
 	background: white;
 	color: #2D7;
+	margin: auto;
+	margin-top: 8px;
 }
 
 .s-fnv {
-	left: 330px;
+	left: 41.5%;
 }
 
 .s-dairy {
-	left: 408px;
+	left: 41.5%;
 }
 
 .s-meat {
-	left: 456px;
+	left: 41.5%;
 }
 
 .s-bng {
-	left: 495px;
+	left: 41.5%;
 }
 
 .s-snacks {
-	left: 539px;
+	left: 41.5%;
 
 }
 
 .s-canned {
-	left: 580px;
+	left: 41.5%;
 }
 
 .s-spices {
-	left: 631px;
+	left: 41.5%;
 }
 
 .s-hhg {
-	left: 662px;
+	left: 41.5%;
 }
 
 .s-other {
-	left: 729px;
+	left: 41.5%;
 }
+
+
+
+/*
+==========================
+Clearfix
+==========================
+*/
+
+.clearfix:after {
+     visibility: hidden;
+     display: block;
+     font-size: 0;
+     content: " ";
+     clear: both;
+     height: 0;
+     }
+.clearfix { display: inline-block; }
+/* start commented backslash hack \*/
+* html .clearfix { height: 1%; }
+.clearfix { display: block; }
+/* close commented backslash hack */
+
 
 /*
 ==========================
@@ -351,7 +379,7 @@ Item
 }
 
 .item .remove, .item .check-uncheck {
-	width: 30px;
+	width: 15%;
 	height: 30px;
 	position: relative;
 	top: 7px;
@@ -363,17 +391,17 @@ Item
 }
 
 .item .check-uncheck {
-	right: 7px;
 	float: right;
 }
 
-.item .textAndIcons {
+/*.item .textAndIcons {
 	margin-top: -9%;
-}
+}*/
 
 .item .text {
 	width: 70%;
 	margin: auto;
+	overflow-wrap: break-word;
 }
 
 .item>div, .item i {
@@ -394,13 +422,13 @@ Item
 .item .cat-icons i {
 	width: 20px;
 	height: 20px;
-	margin: 0px 5px;
+	margin: 7px 9px;
 }
 
-.item .cat-icons {
+/*.item .cat-icons {
 	height: 20px;
 }
-
+*/
 
 /*
 =======================
