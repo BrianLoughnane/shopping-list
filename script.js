@@ -1,7 +1,7 @@
 $(document).ready(function() {
 
-		// $("#input").on("keyup", function(event) {
-	// 	if($(this).hasFocus() && event.which===13) {
+	// $(document).on("keyup", function(event) {
+	// 	if(($("#input").hasFocus()) && event.which===13) {
 	// 		$("#add").click();
 	// 	};
 	// });	
