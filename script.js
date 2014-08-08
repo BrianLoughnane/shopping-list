@@ -39,6 +39,7 @@ $(document).ready(function() {
 			var x = $(this);
 			function showTooltip(icon, span) {
 				if(x.hasClass(icon)) {
+				$(".tooltipDiv span").finish();
 				x.closest("#search-div").find(".tooltipDiv").find(span).slideDown();	
 				}
 			}
