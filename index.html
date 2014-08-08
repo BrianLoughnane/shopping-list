@@ -4,18 +4,19 @@
 	<meta charset="UTF-8">
 	<title>Shopping List</title>
 <!-- 	<link rel="stylesheet" type="text/css" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"> -->
-	<link rel="stylesheet" type="text/css" href="bootstrap.min.css">
+<!-- 	<link rel="stylesheet" type="text/css" href="bootstrap.min.css"> -->
+<link rel="stylesheet" type="text/css" href="bootstrap.css">
 	<link rel="stylesheet" type="text/css" href="style.css">
 <!-- 	// <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script> -->
 </head>
 <body>
-	<article>
+	<div class="container">
 		<header>
 			<h1>My Shopping List</h1>
 			<div id="search-div">
 				<input id="input" type="text" name="grocery" />
 				<button id="add">Add</button>
-				<div id="instructions">
+<!-- 				<div id="instructions">
 					<h4>Instructions</h4>
 					<ul>
 						<li>Type in a list item</li>
@@ -23,7 +24,7 @@
 						<li>Change categories any time by clicking the icons beneath the list item</li>
 						<li>Click the X icon on the left of the list item to remove it, or the check icon to check it</li>
 					</ul>
-				</div>
+				</div> -->
 				<div class="cat-icons">
 					<i class="i-fnv"></i>
 					<i class="i-dairy"></i>
@@ -48,14 +49,19 @@
 				</div>
 			</div>
 		</header>
-		<section id="uncategorized-div">
-			<h3>Uncategorized Items</h3>
-			<ul id="uncategorized-ul">
 
-			</ul>
-		</section>
+		
+		<div id="uncategorized-div" >
+			<div class="col-sm-4 col-xs-12">			
+				<h3>Uncategorized Items</h3>
+				<ul id="uncategorized-ul">
+
+				</ul>
+			</div>
+		</div>
 		<section id="categories">
-			<div id="left">
+			
+			<div id="left" class="col-sm-4 col-xs-12">
 				<h3>Fruits &#38; Veg</h3>
 				<div>
 					<ul id="fnv-ul">
@@ -75,7 +81,7 @@
 					</ul>
 				</div>
 			</div>
-			<div id="center">
+			<div id="center" class="col-sm-4 col-xs-12">
 				<h3>Dairy</h3>
 				<div>
 					<ul id="dairy-ul">
@@ -95,7 +101,7 @@
 					</ul>
 				</div>
 			</div>
-			<div id="right">
+			<div id="right" class="col-sm-4 col-xs-12">
 				<h3>Meats</h3>
 				<div>
 					<ul id="meat-ul">
@@ -116,7 +122,7 @@
 				</div>
 			</div>
 		</section>
-	</article>
+	</div>
 <script src="jquery.min.js"></script>
 <script src="script.js"></script>
 </body>

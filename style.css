@@ -32,6 +32,7 @@ body {
 	background-repeat: no-repeat;
 	background-size: 250px;
 	background-position: 59px 73px;
+	background: white;
 	opacity: 0;
 	-webkit-transition: 1s;
 	-moz-transition: 1s;
@@ -69,19 +70,66 @@ article {
 }
 
 #uncategorized-div {
-	width: 32%;
-	margin: auto;
+	display: block;
+	overflow: hidden;
 }
 
-#categories>div {
-	width: 33%;
-	/*min-width: 32%;*/
-	display: inline-block;
-	/*margin: 0px 5px 0px 5px;*/
-	vertical-align: top;
+#uncategorized-div div{
+	margin-left: 0%;
 }
 
+@media (min-width: 768px) {
+  #uncategorized-div div {
+    margin-left: 33.4%;
+  }
+}
 
+#categories {
+	text-align: center;
+	display: block;
+}
+
+@media all and (max-width: 316px) and (min-width: 0px) {
+	body {
+		background: white;		
+	}
+}
+
+@media all and (max-width: 667px) and (min-width: 317px) {
+	body {
+		background: url('images/food.jpg');
+		background-repeat: no-repeat;
+		background-size: 60px;
+		background-position: 18px 148px;		
+	}
+}
+
+@media all and (max-width: 870px) and (min-width: 668px) {
+	body {
+		background: url('images/food.jpg');
+		background-repeat: no-repeat;
+		background-size: 100px;
+		background-position: 79px 163px;		
+	}
+}
+
+@media all and (max-width: 991px) and (min-width: 871px) {
+	body {
+		background: url('images/food.jpg');
+		background-repeat: no-repeat;
+		background-size: 180px;
+		background-position: 69px 143px;		
+	}
+}
+
+@media (min-width: 992px) {
+	body {
+		background: url('images/food.jpg');
+		background-repeat: no-repeat;
+		background-size: 250px;
+		background-position: 59px 73px;		
+	}
+}
 
 /*
 ==============================
@@ -302,6 +350,7 @@ Item
 	background-color: #2d7;
 	margin-bottom: 5px;
 	font-size: x-large;
+	min-width: 365px;
 }
 
 .item>div:first-child, .item>div:last-child {
